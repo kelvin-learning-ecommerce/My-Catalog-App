@@ -2,7 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
-//    alias(libs.plugins.daggerHilt)
+    alias(libs.plugins.daggerHilt)
+//    id ("com.google.devtools.ksp") version '1.7.20-1.0.6'
 }
 
 android {
@@ -58,14 +59,17 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.androidx.material3.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-//    implementation(libs.androidx.material3)
     implementation(libs.androidx.material)
     implementation(libs.android.hilt.navigation)
     implementation(libs.android.hilt.navigation.fragment)
     implementation(libs.androidx.nav.compose)
+    implementation(libs.androidx.ui.tooling.preview)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.async.image)
 
     //hilt
     kapt(libs.hilt.compiler)
@@ -79,7 +83,12 @@ dependencies {
 
     //room
     implementation(libs.room.runtime)
-    annotationProcessor(libs.room.compiler)
+//    annotationProcessor(libs.room.compiler)
+    kapt(libs.room.compiler)
     implementation(libs.room.ktx)
     kapt(libs.room.persistance)
+}
+
+kapt {
+    correctErrorTypes = true
 }

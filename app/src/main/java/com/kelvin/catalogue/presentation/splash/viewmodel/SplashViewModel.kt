@@ -1,4 +1,4 @@
-package com.kelvin.githubapiapp.splash.viewmodel
+package com.kelvin.catalogue.presentation.splash.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

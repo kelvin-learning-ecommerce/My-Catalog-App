@@ -1,4 +1,4 @@
-package com.kelvin.catalogue.domain
+package com.kelvin.catalogue.core.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -6,5 +6,5 @@ import com.kelvin.catalogue.data.model.CatalogDaoModel
 
 @Database(entities = [CatalogDaoModel::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun catalogDao(): FavoriteDao
+    abstract fun catalogDao(): RoomDao
 }

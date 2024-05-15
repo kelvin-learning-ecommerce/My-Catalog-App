@@ -1,4 +1,4 @@
-package com.kelvin.githubapiapp
+package com.kelvin.catalogue
 
 import android.os.Build
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.kelvin.catalogue.presentation.shared.AppNavHost
-import com.kelvin.catalogue.presentation.theme.GithubApiAppTheme
+import com.kelvin.catalogue.presentation.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GithubApiAppTheme {
+            AppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background

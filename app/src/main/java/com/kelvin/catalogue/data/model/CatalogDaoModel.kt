@@ -10,6 +10,9 @@ data class CatalogDaoModel(
     @PrimaryKey(autoGenerate = true) var uid: Int? = null,
     @ColumnInfo("id") var id: Int,
     @ColumnInfo("name") var name: String,
+    @ColumnInfo("avatar_url") var avatarUrl: String,
+    @ColumnInfo("repos_url") var reposUrl: String,
 ) : DataMapper<CatalogEntity>() {
-    override fun mapToEntity(): CatalogEntity = CatalogEntity(id, name)
+    override fun mapToEntity(): CatalogEntity =
+        CatalogEntity(id, name, avatarUrl = avatarUrl, reposUrl = reposUrl)
 }

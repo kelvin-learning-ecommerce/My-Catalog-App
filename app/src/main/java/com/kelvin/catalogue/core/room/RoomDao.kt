@@ -1,4 +1,4 @@
-package com.kelvin.catalogue.domain
+package com.kelvin.catalogue.core.room
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -6,7 +6,7 @@ import androidx.room.Query
 import com.kelvin.catalogue.data.model.CatalogDaoModel
 
 @Dao
-interface FavoriteDao {
+interface RoomDao {
     @Query("SELECT * FROM catalogdaomodel")
     fun getAll(): List<CatalogDaoModel>
 

@@ -5,3 +5,10 @@ plugins {
     alias(libs.plugins.daggerHilt) apply false
     alias(libs.plugins.androidLibrary) apply false
 }
+
+buildscript {
+    dependencies {
+        classpath(libs.dagger.hilt.plugin)
+
+    }
+}

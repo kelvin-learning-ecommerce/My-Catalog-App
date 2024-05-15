@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Icon
-//noinspection UsingMaterialAndMaterial3Libraries
 import androidx.compose.material.Surface
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
@@ -15,8 +14,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.kelvin.githubapiapp.splash.viewmodel.SplashViewModel
-import com.kelvin.catalogue.presentation.theme.GithubApiAppTheme
+import com.kelvin.catalogue.presentation.splash.viewmodel.SplashViewModel
+import com.kelvin.catalogue.presentation.theme.AppTheme
 
 @SuppressLint("StateFlowValueCalledInComposition")
 @Composable
@@ -27,7 +26,7 @@ fun SplashScreen(
 
     vm.toHomePage(navController)
 
-    GithubApiAppTheme {
+    AppTheme {
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = Color.White,
@@ -48,7 +47,7 @@ fun SplashScreen(
 @Preview(showBackground = true)
 @Composable
 fun HomePagePreview() {
-    GithubApiAppTheme {
+    AppTheme {
         Box(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
