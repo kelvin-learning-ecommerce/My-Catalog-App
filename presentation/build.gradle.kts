@@ -62,4 +62,14 @@ dependencies {
     kapt(libs.hilt.compiler)
     kapt(libs.androidx.hilt.compiler)
     implementation(libs.android.hilt)
+
+    //test
+    testImplementation(libs.room.test)
+    kaptAndroidTest(libs.android.hilt.compiler)
+    androidTestImplementation(libs.android.hilt.test)
+
+    implementation(libs.io.mock)
+    implementation(libs.coroutines.test)
+    implementation(libs.google.truth)
+
 }
