@@ -2,7 +2,7 @@ package com.kelvin.githubapiapp.popularlist
 
 import com.kelvin.domain.data.CatalogEntity
 
-val dummyCatalogUiModel = listOf(
+val dummyPopularUiModel = listOf(
     CatalogEntity(
         id = 0,
         name = "mock 1",
