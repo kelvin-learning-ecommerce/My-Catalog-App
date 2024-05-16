@@ -9,6 +9,5 @@ plugins {
 buildscript {
     dependencies {
         classpath(libs.dagger.hilt.plugin)
-
     }
 }

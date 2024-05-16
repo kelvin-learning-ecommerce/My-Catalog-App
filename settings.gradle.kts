@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Catalogue App"
 include(":app")
+include(":presentation")
+include(":domain")
+include(":data")

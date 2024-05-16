@@ -1,19 +1,15 @@
 package com.kelvin.catalogue.core.di
 
-import android.content.Context
-import androidx.room.Room
-import com.kelvin.catalogue.core.room.AppDatabase
-import com.kelvin.catalogue.data.datasource.ApiDataSource
-import com.kelvin.catalogue.data.datasource.ApiDataSourceImpl
-import com.kelvin.catalogue.data.datasource.ApiService
-import com.kelvin.catalogue.domain.repository.UserRepository
-import com.kelvin.catalogue.domain.repository.UserRepositoryImpl
-import com.kelvin.catalogue.domain.usecase.UsersUseCase
+import com.kelvin.catalog.datasource.ApiDataSource
+import com.kelvin.catalog.datasource.ApiDataSourceImpl
+import com.kelvin.catalog.datasource.ApiService
+import com.kelvin.domain.repository.UserRepository
+import com.kelvin.domain.repository.UserRepositoryImpl
+import com.kelvin.domain.usecase.UsersUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor

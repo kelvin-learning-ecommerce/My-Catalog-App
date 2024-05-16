@@ -2,14 +2,14 @@ package com.kelvin.catalogue.core.di
 
 import android.content.Context
 import androidx.room.Room
-import com.kelvin.catalogue.data.datasource.CatalogDataSource
-import com.kelvin.catalogue.data.datasource.CatalogDataSourceImpl
-import com.kelvin.catalogue.core.room.AppDatabase
-import com.kelvin.catalogue.domain.repository.CatalogRepository
-import com.kelvin.catalogue.domain.repository.CatalogRepositoryImpl
-import com.kelvin.catalogue.domain.usecase.DeleteCatalogUseCase
-import com.kelvin.catalogue.domain.usecase.FetchCatalogUseCase
-import com.kelvin.catalogue.domain.usecase.SaveCatalogUseCase
+import com.kelvin.catalog.datasource.CatalogDataSource
+import com.kelvin.catalog.datasource.CatalogDataSourceImpl
+import com.kelvin.catalog.room.AppDatabase
+import com.kelvin.domain.repository.CatalogRepository
+import com.kelvin.domain.repository.CatalogRepositoryImpl
+import com.kelvin.domain.usecase.DeleteCatalogUseCase
+import com.kelvin.domain.usecase.FetchCatalogUseCase
+import com.kelvin.domain.usecase.SaveCatalogUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

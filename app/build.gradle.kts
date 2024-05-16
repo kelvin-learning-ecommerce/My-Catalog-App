@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     alias(libs.plugins.daggerHilt)
-//    id ("com.google.devtools.ksp") version '1.7.20-1.0.6'
 }
 
 android {
@@ -55,6 +54,9 @@ android {
 }
 
 dependencies {
+    implementation(project(Modules.presentation))
+    implementation(project(Modules.domain))
+    implementation(project(Modules.data))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -83,7 +85,6 @@ dependencies {
 
     //room
     implementation(libs.room.runtime)
-//    annotationProcessor(libs.room.compiler)
     kapt(libs.room.compiler)
     implementation(libs.room.ktx)
     kapt(libs.room.persistance)
