@@ -31,6 +31,7 @@
 ### Libraries & Tools Used
 
 * Android Compose
+* Navigation Compose
 * Test Unit (Junit, kluent, mockk, coroutines test)
 * google dagger hilt
 * Retrofit
