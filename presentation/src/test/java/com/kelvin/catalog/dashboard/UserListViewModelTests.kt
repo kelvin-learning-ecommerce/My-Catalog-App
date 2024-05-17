@@ -7,7 +7,7 @@ import com.kelvin.domain.usecase.DeleteCatalogUseCase
 import com.kelvin.domain.usecase.FetchCatalogUseCase
 import com.kelvin.domain.usecase.SaveCatalogUseCase
 import com.kelvin.domain.usecase.UsersUseCase
-import com.kelvin.githubapiapp.popularlist.dummyCatalogUiModel
+import com.kelvin.githubapiapp.popularlist.dummyCatalogEntity
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -64,7 +64,7 @@ class UserListViewModelTests {
 
     @Test
     fun `onRequestSuccess update the movie list state`() = runTest {
-        val testList = dummyCatalogUiModel
+        val testList = dummyCatalogEntity
         viewModel.updateState(data = testList)
 
 //        viewModel.onRequestSuccess(listOfMovie)
@@ -78,7 +78,7 @@ class UserListViewModelTests {
     @Test
     fun `onRequestSuccess update pagination state when data is not empty or didn't reached the limit`() =
         runTest {
-            viewModel.onRequestSuccess(dummyCatalogUiModel)
+            viewModel.onRequestSuccess(dummyCatalogEntity)
 
             val actualIsLoadingState = viewModel.paginationState.value.isLoading
 
@@ -87,7 +87,7 @@ class UserListViewModelTests {
 
     @Test
     fun `onRequestSuccess update pagination state when data is empty`() = runTest {
-        viewModel.updateState(data = dummyCatalogUiModel)
+        viewModel.updateState(data = dummyCatalogEntity)
         viewModel.onRequestSuccess(emptyList())
 
         val actualIsLoadingState = viewModel.paginationState.value.isLoading
@@ -97,12 +97,12 @@ class UserListViewModelTests {
 
     @Test
     fun `when getUsers called and result is Success`() = runTest {
-        viewModel.onRequestSuccess(dummyCatalogUiModel)
+        viewModel.onRequestSuccess(dummyCatalogEntity)
 
         val actualmovieList = viewModel.state.value.data
         val actualIsLoading = viewModel.paginationState.value.isLoading
 
-        assertThat(actualmovieList).isEqualTo(dummyCatalogUiModel)
+        assertThat(actualmovieList).isEqualTo(dummyCatalogEntity)
         assertThat(actualIsLoading).isFalse()
     }
 
